@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NoteZ/static/css/main.34b5725f.css",
+    "main.js": "/NoteZ/static/js/main.f581b2a7.js",
+    "index.html": "/NoteZ/index.html",
+    "main.34b5725f.css.map": "/NoteZ/static/css/main.34b5725f.css.map",
+    "main.f581b2a7.js.map": "/NoteZ/static/js/main.f581b2a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34b5725f.css",
+    "static/js/main.f581b2a7.js"
+  ]
+}
