@@ -1,0 +1,26 @@
+{
+    "allEvents": [
+        {
+            "id": "1",
+            "images": [
+                "snow.jpg"
+            ],
+            "eventDate": "01/01/2024",
+            "dateAdded": "01/01/2024",
+            "title": "New Year",
+            "description": "The New Year is the time or day at which a new calendar year begins and the calendar's year count restarts by one. Many cultures in the world celebrate the event in some manner. In the Gregorian calendar, the most widely used calendar system today, New Year occurs on January 1",
+            "isFavourite": true
+        },
+        {
+            "id": "2",
+            "images": [
+                "sunset.jpg"
+            ],
+            "eventDate": "31/12/2023",
+            "dateAdded": "01/01/2024",
+            "title": "2023 Recap",
+            "description": "2023 was a common year starting on Sunday of the Gregorian calendar, the 2023rd year of the Common Era and Anno Domini designations, the 23rd year of the 3rd millennium and the 21st century, and the 4",
+            "isFavourite": false
+        }
+    ]
+}

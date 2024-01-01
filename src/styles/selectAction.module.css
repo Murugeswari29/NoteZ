@@ -1,0 +1,12 @@
+.actionContainer {
+    height: 100%;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.actionCardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
