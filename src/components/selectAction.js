@@ -1,64 +1,42 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import styles from "../styles/selectAction.module.css"
-import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
-
-
+import { ImageListItemBar } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import ImageListItem from '@mui/material/ImageListItem';
+import allDetails from "./allDetails.json"
 const SelectAction = () => {
 
-    const actionItem = [
-        {
-            label: "Journal",
-            route: ""
-        },
-        {
-            label: "Reminder",
-            route: ""
-        },
-        {
-            label: "Events",
-            route: "/NoteZ/all_events"
-        },
-        {
-            label: "To Do List",
-            route: ""
-        }
-    ]
+    const actionItem = allDetails.sections;
 
     // Method to get card element
     const getActionCard = (item) => {
         return <React.Fragment>
-            <CardContent className={styles.actionCardContent}>
-                <Typography variant="h5" gutterBottom color="text.secondary">
-                    {item.label}
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    Description
-                </Typography>
-            </CardContent>
-            <CardActions
-                className={styles.justifyCenter}
-            >
-                <Stack direction="row" spacing={2}>
-                    <Button variant="contained">Add</Button>
-
-
-                    <Link to={item.route}>
-                        <Button variant="contained">
-                            View
-                        </Button>
-                    </Link>
-
-
-                </Stack>
-            </CardActions>
+            <ImageListItem key={item.title}>
+            <img
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=248&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar
+            title={item.title}
+            subtitle="sub"
+            actionIcon={
+              <IconButton
+                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+              >
+                <Link to={item.route}>
+                    <ArrowForwardRoundedIcon />
+                </Link>
+              </IconButton>
+            }
+          />
+          </ImageListItem>
         </React.Fragment>
     }
 
@@ -75,10 +53,10 @@ const SelectAction = () => {
             {
                 actionItem.map(action => (
                     <Grid item xs={1} sm={4} md={4}
-                        key={action.label}
+                        key={action.title}
                     >
                         <Box sx={{ minWidth: 200 }}>
-                            <Card variant="outlined">{getActionCard(action)}</Card>
+                            <Card>{getActionCard(action)}</Card>
                         </Box>
                     </Grid>
                 ))

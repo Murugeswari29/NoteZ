@@ -13,40 +13,44 @@ export default function EventCard(props) {
   const cardData = props.cardData;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }}
+    >
+
+      <CardHeader
+        action={
+          <React.Fragment>
+            {
+              cardData.isFavourite && (
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon
+                    sx={{ color: 'red' }}
+                  />
+                </IconButton>
+              )
+            }
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          </React.Fragment>
+        }
+        title={cardData.title}
+        subheader={cardData.eventDate}
+      />
       <CardActionArea>
-        <CardHeader
-          action={
-            <React.Fragment>
-              {
-                cardData.isFavourite && (
-                  <IconButton aria-label="add to favorites">
-                    <FavoriteIcon
-                      sx={{ color: 'red' }}
-                    />
-                  </IconButton>
-                )
-              }
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            </React.Fragment>
-          }
-          title={cardData.title}
-          subheader={cardData.eventDate}
-        />
         <CardMedia
+          onClick={(e) => { props.onClick(cardData) }}
           component="img"
           height="194"
           image={require(`../../assets/${cardData.images[0]}`)}
           alt="Paella dish"
         />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {cardData.description.slice(0, 130)}
-          </Typography>
-        </CardContent>
       </CardActionArea>
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          {cardData.description.slice(0, 130)}
+        </Typography>
+      </CardContent>
+
     </Card>
   );
 }

@@ -40,8 +40,8 @@ function HeaderNavBar() {
   };
 
   return (
-    <AppBar position="static"
-      sx={{ backgroundColor: '#0a3772' }}>
+    <AppBar position="fixed"
+      sx={{ backgroundColor: '#ffffff', color: '#19202D' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src={AppLogo} alt={'shadow-reels-logo'} height={'50px'}></img>
@@ -123,7 +123,7 @@ function HeaderNavBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color:'#19202D', display: 'block' }}
               >
                 {page}
               </Button>

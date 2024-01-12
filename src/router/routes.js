@@ -2,7 +2,7 @@ import {
   createBrowserRouter
 } from "react-router-dom";
 import SelectAction from "../components/selectAction";
-import AllEvents from "../components/events/viewAllEvents";
+import EventsHome from "../components/events/eventsHome";
 
 // all route elements
 const router = createBrowserRouter([
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/NoteZ/all_events",
-    element: <AllEvents/>,
+    element: <EventsHome/>,
   },
 ]);
 

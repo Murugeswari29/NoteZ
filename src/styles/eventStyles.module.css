@@ -1,3 +1,25 @@
 .allEventsContainer{
     height: 100%;
 }
+.addEventBtn{
+    position: relative;
+    margin-bottom: 10px;
+}
+.transparentBg{
+    background-color: transparent;
+}
+.eventDisplay{
+    width: 80%;
+    height: 80%;
+}
+.imagesSection{
+    width: 60%;
+    height: 100%
+}
+.input{
+    display: none;
+}
+button {
+    color: blue;
+    margin: 10
+  }

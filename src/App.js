@@ -1,21 +1,22 @@
 import './App.css';
-import SelectAction from './components/selectAction';
 import { Container } from '@mui/material';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AllEvents from "./components/events/viewAllEvents"
 import HeaderNavBar from './components/common/header';
-
+import router from './router/routes';
+import Box from '@mui/material/Box';
+import {
+  RouterProvider,
+} from "react-router-dom";
+import * as React from 'react';
 function App() {
   return (
-    <Router>
+    <React.Fragment>
       <HeaderNavBar />
-      <Container className="App">
-        <Routes>
-          <Route path="/NoteZ/" element={<SelectAction />}></Route>
-          <Route path="/NoteZ/all_events" element={<AllEvents />}></Route>
-        </Routes>
+      <Container fixed className='App'>
+        <Box sx={{ my: 2 }}>
+          <RouterProvider router={router} />
+        </Box>
       </Container>
-    </Router>
+    </React.Fragment>
   );
 }
 

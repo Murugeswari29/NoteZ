@@ -1,0 +1,29 @@
+{
+    "sections": [
+        {
+            "title": "Journal",
+            "route": "",
+            "img": "https://images.squarespace-cdn.com/content/v1/5c049be7266c079acd7a0ac2/6dda27b2-3ee2-41f3-a226-c1b6edb82ff9/Screenshot+2022-04-22+11.11.52+AM.png"
+        },
+        {
+            "title": "Reminder",
+            "route": "",
+            "img": "https://images-na.ssl-images-amazon.com/images/I/81AXb1blI8L.jpg"
+        },
+        {
+            "title": "Events",
+            "route": "/NoteZ/all_events",
+            "img": "https://www.mtc.edu/_resources/images/placeholders/events.jpg"
+        },
+        {
+            "title": "To Do List",
+            "route": "",
+            "img": "https://i.pinimg.com/originals/23/22/e6/2322e673dfa3134d4269f1285e328418.jpg"
+        },
+        {
+            "title": "Health",
+            "route": "",
+            "img": "https://sandiebyrne.com/wp-content/uploads/2020/07/zen-balanced-stones-stack-on-beach-ANDB7WG-scaled.jpg"
+        }
+    ]
+}
